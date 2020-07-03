@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xmls="http://schemas.android.com/apk/res/android"
+    xmls:layout_height="match_parent"
+    xmls:layout_width="match_parent"
+    xmls:id="@+id/coordinator"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        xmls:id="@+id/appBarLayout"
+        xmls:layout_width="match_parent"
+        xmls:layout_height="wrap_content"
+        app:elevation="10dp">
+
+        <androidx.appcompat.widget.Toolbar
+            xmls:id="@+id/toolbar"
+            xmls:layout_width="match_parent"
+            xmls:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                xmls:id="@+id/constraint"
+                xmls:layout_width="match_parent"
+                xmls:layout_height="match_parent">
+
+                <Button
+                    xmls:id="@+id/do_planning"
+                    xmls:text="@string/do_planning"
+                    xmls:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    xmls:onClick="onMenuButtonClick"
+                    xmls:layout_width="wrap_content"
+                    xmls:layout_height="wrap_content"
+                    xmls:background="@color/colorGreen"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/planning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    xmls:id="@+id/planning"
+                    xmls:text="@string/planning"
+                    xmls:onClick="onMenuButtonClick"
+                    xmls:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    xmls:background="@color/colorRed"
+                    xmls:layout_width="wrap_content"
+                    xmls:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    xmls:text="@string/accounting"
+                    xmls:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    xmls:id="@+id/accounting"
+                    xmls:background="@color/colorPurple"
+                    xmls:onClick="onMenuButtonClick"
+                    xmls:layout_width="wrap_content"
+                    xmls:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/planning"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        xmls:id="@+id/recycler_scroll"
+        xmls:layout_width="match_parent"
+        xmls:layout_height="match_parent"
+        xmls:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!-- FloatingActionButton-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        xmls:layout_width="wrap_content"
+        xmls:layout_height="wrap_content"
+        xmls:src="@android:drawable/ic_input_add"
+        app:layout_anchor="@id/recycler_scroll"
+        app:layout_anchorGravity="bottom|end"
+        xmls:id="@+id/floating_action_button"
+        xmls:onClick="onAddScrollRow"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

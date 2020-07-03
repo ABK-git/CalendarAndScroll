@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ThePlanning1</string>
+    <string name="do_planning">日報</string>
+    <string name="planning">予定</string>
+    <string name="accounting">会計</string>
+    <string name="to_previous">先月へ</string>
+    <string name="to_next">来月へ</string>
+    <string name="year_month">%04d年%02d月</string>
+    <string name="year_month_day">%04d年%02d月%02d日</string>
+    <string name="money">金額：</string>
+    <string name="add_memo_do_planning">日報メモ入力</string>
+    <string name="add_memo_planning">予定メモ入力</string>
+    <string name="add_memo_accounting">会計メモ入力</string>
+    <string name="hint_money">金額入力欄</string>
+    <string name="hint_memo">ここにメモを入力してください</string>
+    <string name="register">登録</string>
+    <string name="cancel">キャンセル</string>
+    <string name="return_top">戻る</string>
+    <string name="realm_database_name">RealmScroll</string>
+    <string name="empty_money">金額を入力してください</string>
+    <string name="empty_memo">メモを入力してください</string>
+    <string name="successful_register">登録に成功しました</string>
+    <string name="register_time">登録時刻</string>
+    <string name="pay_money">支出金額：</string>
+    <string name="memo">メモの内容</string>
+
+</resources>
